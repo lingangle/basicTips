@@ -19,3 +19,28 @@
   
 
 
+## 3.BFC
+
+  #### BFC是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。Box是CSS布局的对象和基本单位。
+
+    >> 块级格式化上下文布局规则
+      * 内部的BOX会在垂直方向一个接一个的放置
+      * 属于同一个BFC的两个相邻的BOX的margin会重叠
+      * 是页面上一个隔离的独立容器，里面的元素不会影响到外面的元素
+      * BFC的区域不会和float box重叠
+      * 计算BFC的高度，浮动元素也参与计算    
+  >> 触发条件
+  >>> 触发条件简要概括
+    * 根元素
+    * 浮动元素
+    * position为absolute或fixed
+    * overflow不为visible
+    * display为inline-block,table-cell,table-caption,flex,inline-flex
+  >>>触发条件详细介绍
+    * 根元素/浮动元素/绝对定位元素/行内快元素/表格单元格/表格标题/匿名表格单元格元素/overflow值不为visible的块元素
+    * 弹性元素/网格元素/多列容器/display为flow-root/contain值为layout.content.paint/column-span为all的元素始终会创建一个新的BFC，即使该元素没有包裹在一个多列容器中
+  >>应用场景
+   * 清除内部浮动，触发父元素的BFC属性，会包含float元素
+   * 分属于不同的BFC，可以阻止Margin重叠
+   * 阻止元素被浮动元素覆盖，各自是独立的渲染区域
+   * 自适应两栏布局
