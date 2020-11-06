@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-10-22 08:48:27
- * @LastEditTime: 2020-10-28 17:42:12
- * @LastEditors: your name
+ * @LastEditTime: 2020-11-06 10:15:13
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \basicTips\js\tips.md
 -->
@@ -95,4 +95,14 @@
 
   ##
    * DOM事件流分为3个阶段：事件捕获，到达目标，事件冒泡。
+
+
+  **
+    * Set判断两个值是否相等的运算符用的是"===" ,除了在对NAN进行操作的时候，它会认为是相同的值。两个对象是不相等的。
+    * 拥有的方法：add(),size,has(),delete()
+    * Array.from方法可以将Set结构转为数组
+    去除数组重复成员的方法：Array.from(new Set(array)) / [...new Set(array)]
+
+
+
 
